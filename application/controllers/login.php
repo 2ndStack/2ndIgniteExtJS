@@ -30,8 +30,7 @@ class Login extends CI_Controller
     {
 
         $data = array();
-        $data['auth'] = $this->ion_auth;
-//        $this->load->view('login/login');
+        $data['auth'] = $this->ion_auth; 
         $this->template->set_theme('ewidt');
         $this->template->build('auth/login');
     }

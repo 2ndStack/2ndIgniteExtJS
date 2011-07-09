@@ -1,3 +1,5 @@
+use extci;
+
 DROP TABLE IF EXISTS `groups`;
 
 #

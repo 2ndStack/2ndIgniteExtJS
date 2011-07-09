@@ -29,8 +29,7 @@ class Dashboard extends CI_Controller
     public function index()
     {
 
-        /*if (!$this->ion_auth->logged_in()) {
-            //redirect them to the login page
+        if (!$this->ion_auth->logged_in()) {
             redirect('auth/login', 'refresh');
         }
 
@@ -38,10 +37,10 @@ class Dashboard extends CI_Controller
         $data = array();
         $data['loggedUser'] = $this->ion_auth->get_user();
         $this->template->set_theme('ewidt');
-        $this->template->build('dashboard/dashboard', $data);*/
-
+        $this->template->build('dashboard/dashboard', $data);
+/*
         $this->template->set_theme('ewidt');
-        $this->template->build('dashboard/dashboard');
+        $this->template->build('dashboard/dashboard');*/
     }
 }
 

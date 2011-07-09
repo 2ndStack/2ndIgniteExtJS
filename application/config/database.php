@@ -41,10 +41,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhosts';
-$db['default']['username'] = 'atm';
-$db['default']['password'] = 'atmatm';
-$db['default']['database'] = 'ewidt';
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = 'localhost';
+$db['default']['database'] = 'extci';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

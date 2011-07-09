@@ -6,30 +6,27 @@
 
     <style type="text/css">
 
-        
-        
-        .x-column-header-inner{
+
+        .x-column-header-inner {
             background-color: #a3bae9;
-            
+
         }
 
-        div.x-grid-cell-inner{
+        div.x-grid-cell-inner {
             background-color: yellow;
         }
 
-        #atmofflinepanel div.x-grid-cell-inner{
+        #atmofflinepanel div.x-grid-cell-inner {
             background-color: red;
         }
 
-        div#gridview-1036.x-component{
+        div#gridview-1036.x-component {
             background-color: #0000DD;
         }
 
-        #atmcashflow div.x-grid-cell-inner, #atmhistory  div.x-grid-cell-inner{
+        #atmcashflow div.x-grid-cell-inner, #atmhistory  div.x-grid-cell-inner {
             background-color: white;
-        } 
-
-
+        }
 
         #loading-mask {
             position: absolute;
@@ -94,8 +91,7 @@
         Ext.onReady(function() {
             Ext.create('Ext.app.Portal', {
                 imgLink:"<?php echo base_url() . 'static/'?>images/ewidt/logo-mod.png",
-                <!--                loggedUser:'--><?php //echo $loggedUser->first_name; ?><!--',-->
-                loggedUser:'Admin',
+                loggedUser:'<?php echo $loggedUser->first_name; ?>',
                 logoutLink:'<?php echo site_url("auth/logout")?>'
             });
 

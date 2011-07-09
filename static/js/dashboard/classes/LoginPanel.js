@@ -14,13 +14,13 @@ Ext.define('Ext.app.LoginPanel', {
                 anchor: '100%'
             },
             frame: true,
-            height: 210,
+            height: 220,
             width: 400,
             items: [
                 Ext.create('Ext.Component', {
                     html:'<div style="text-align: center;"><img style="text-align: center;" src="' + this.imgUrl + '" alt="Euronet"/>' +
-                            '<label style="font-size: 30px;font-weight: bold;">&nbsp;&nbsp;EWIDT</label>' +
-                            ' </div>'
+                        '<label style="font-size: 30px;font-weight: bold;">&nbsp;&nbsp;ExtJS CI</label>' +
+                        ' </div>'
                 }) ,
                 {
                     xtype:'fieldset',
@@ -62,17 +62,16 @@ Ext.define('Ext.app.LoginPanel', {
 //                    disabled: true,
                     handler: function() {
                         var form = this.up('form').getForm();
-                        window.location = form.successRedirect;
-                        /* if (form.isValid()) {
-                         form.submit({
-                         success: function(form, action) {
-                         window.location = form.successRedirect;
-                         },
-                         failure: function(form, action) {
-                         Ext.Msg.alert('Failed', action.result.msg);
-                         }
-                         });
-                         }*/
+                        if (form.isValid()) {
+                            form.submit({
+                                success: function(form, action) {
+                                    window.location = form.successRedirect;
+                                },
+                                failure: function(form, action) {
+                                    Ext.Msg.alert('Failed', action.result.msg);
+                                }
+                            });
+                        }
                     }
                 }
             ]
